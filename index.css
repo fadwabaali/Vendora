@@ -1,0 +1,119 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+}
+
+/*========== Navbar ===========*/
+
+.dark {
+    background-color: #121212;
+    color: #FFF;
+}
+
+nav {
+    position: relative;
+    display: flex;
+    justify-content: space-between ;
+    align-items: center;
+    padding: 2rem;
+}
+ 
+nav .logo {
+    display: flex;
+    align-items: center;
+    gap: .5rem;
+    cursor: pointer;
+}
+
+nav .logo h1 {
+    font-size: 1rem;
+    letter-spacing: 2px;
+}
+
+nav .logo .bxs-home{
+    font-size: 1.2rem;
+    color: #6A8B94;
+}
+
+ul {
+    list-style-type: none; 
+    background: #6A8B94;
+    display: none;
+}
+
+ul li {
+    cursor: pointer;
+}
+
+nav .menu__toggler {
+    position: absolute;
+    right: 4rem;
+}
+
+nav .menu__toggler, nav .dark__mode {
+    cursor: pointer;
+    font-size: 1.2rem;
+    z-index: 2;
+}
+
+nav .menu__toggler .bx-x, .open__menu .menu__toggler .bx-menu, nav .dark__mode .bx-sun, .dark .dark__mode .bx-moon {
+    display: none;
+}
+
+.open__menu .menu__toggler .bx-x, .dark .dark__mode .bx-sun{
+    display: block;
+}
+
+.open__menu ul {
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 70%;
+    height: 80vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 2rem;
+    box-shadow: -3px 1px 8px 4px rgb(0 0 1 / 8%);
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+}
+
+
+/*========== Responsive Navbar ===========*/
+
+@media screen and (min-width: 768px) {
+    nav .logo h1 , nav .logo .bxs-home, nav .bx {
+        font-size: 1.5rem;
+    }
+
+    nav ul li {
+        font-size: 1.2rem;
+    }
+
+    nav {
+        justify-content: space-evenly;
+    }
+
+    nav .menu__toggler {
+        display: none;
+    }
+
+    nav ul {
+        position: relative;
+        display: flex;
+        gap: 2rem;
+        align-items: center;
+        background: none;
+
+    }
+
+    nav ul li:hover {
+        color: #6A8B94;
+        transition: .5s;
+    }
+}
