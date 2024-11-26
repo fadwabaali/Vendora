@@ -1,0 +1,106 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+}
+
+/*========== Navbar ===========*/
+
+nav {
+    position: relative;
+    display: flex;
+    justify-content: space-between ;
+    align-items: center;
+    padding: 2rem;
+}
+ 
+nav .logo {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    cursor: pointer;
+}
+
+nav .logo .bxs-home{
+    font-size: 1.5rem;
+    color: #6A8B94;
+}
+
+ul {
+    position: absolute;
+    right: 0;
+    top: 0;
+    list-style-type: none; 
+    background: #6A8B94;
+    opacity: 0; 
+    visibility: hidden; 
+    transform: translateX(100%); 
+    transition: opacity 0.5s ease, transform 0.5s ease; 
+}
+
+ul li {
+    cursor: pointer;
+    font-size: 1.2rem;
+}
+
+nav .menu__toggler {
+    cursor: pointer;
+    font-size: 2rem;
+    z-index: 2;
+}
+
+nav .menu__toggler .bx-x, .open__menu .menu__toggler .bx-menu {
+    display: none;
+}
+
+.open__menu .menu__toggler .bx-x{
+    display: block;
+}
+
+.open__menu ul {
+    opacity: 1; 
+    width: 70%;
+    height: 80vh;
+    visibility: visible;
+    transform: translateX(0);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 2rem;
+    box-shadow: -3px 1px 8px 4px rgb(0 0 1 / 8%);
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+}
+
+
+/*========== Responsive Navbar ===========*/
+
+@media screen and (min-width: 768px) {
+    nav {
+        justify-content: space-around;
+    }
+    nav .menu__toggler {
+        display: none;
+    }
+
+    nav ul {
+        position: relative;
+        background: none;
+        opacity: 1;
+        visibility: visible;
+        transform: translateX(0);
+        display: flex;
+        align-items: center;
+        gap: 2rem;
+        box-shadow: none;
+        border-radius: 0;
+    }
+
+    nav ul li:hover {
+        color: #6A8B94;
+        transition: .5s;
+    }
+}
