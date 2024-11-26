@@ -19,6 +19,8 @@ nav {
     justify-content: space-between ;
     align-items: center;
     padding: 2rem;
+    margin-bottom: 1rem;
+    height: 4rem;
 }
  
 nav .logo {
@@ -35,12 +37,12 @@ nav .logo h1 {
 
 nav .logo .bxs-home{
     font-size: 1.2rem;
-    color: #6A8B94;
+    color: #ffdb58;
 }
 
 ul {
     list-style-type: none; 
-    background: #6A8B94;
+    background: #ffdb58;
     display: none;
 }
 
@@ -113,7 +115,63 @@ nav .menu__toggler .bx-x, .open__menu .menu__toggler .bx-menu, nav .dark__mode .
     }
 
     nav ul li:hover {
-        color: #6A8B94;
+        color: #ffdb58;
         transition: .5s;
     }
 }
+
+/*========== Product ===========*/
+
+.product__sec{
+    display: grid;
+    grid-template-columns: repeat(1,1fr);
+    place-items: center;
+}
+
+.product__container #ProductImg {
+    height: 300px;
+    width: 300px;
+}
+
+.product__container .product__content .product__img img{
+    height: 70px;
+    width: 70px;
+    object-fit: cover;
+    cursor: pointer;
+}
+
+.product__container .product__content{
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    gap: .3rem;
+}
+
+.descp__container{
+    padding: 0 1rem;
+}
+
+.descp__container h2, .descp__container h3, .descp__container p{
+    margin-bottom: .5rem;
+}
+
+
+/*========== Responsive Product ===========*/
+
+@media screen and (min-width: 768px) {
+    .product__sec {
+        display: grid;
+        grid-template-columns: repeat(2,1fr);
+        padding-right: 2rem;
+    }
+
+    .product__container #ProductImg {
+        height: 450px;
+        width: 450px;
+    }
+    
+    .product__container .product__content .product__img img{
+        height: 100px;
+        width: 100px;
+    }
+}
+
