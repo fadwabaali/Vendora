@@ -8,6 +8,11 @@
 
 /*========== Navbar ===========*/
 
+.dark {
+    background-color: #121212;
+    color: #FFF;
+}
+
 nav {
     position: relative;
     display: flex;
@@ -19,52 +24,55 @@ nav {
 nav .logo {
     display: flex;
     align-items: center;
-    gap: 1rem;
+    gap: .5rem;
     cursor: pointer;
 }
 
+nav .logo h1 {
+    font-size: 1rem;
+    letter-spacing: 2px;
+}
+
 nav .logo .bxs-home{
-    font-size: 1.5rem;
+    font-size: 1.2rem;
     color: #6A8B94;
 }
 
 ul {
-    position: absolute;
-    right: 0;
-    top: 0;
     list-style-type: none; 
     background: #6A8B94;
-    opacity: 0; 
-    visibility: hidden; 
-    transform: translateX(100%); 
-    transition: opacity 0.5s ease, transform 0.5s ease; 
+    display: none;
 }
 
 ul li {
     cursor: pointer;
-    font-size: 1.2rem;
 }
 
 nav .menu__toggler {
+    position: absolute;
+    right: 4rem;
+}
+
+nav .menu__toggler, nav .dark__mode {
     cursor: pointer;
-    font-size: 2rem;
+    font-size: 1.2rem;
     z-index: 2;
 }
 
-nav .menu__toggler .bx-x, .open__menu .menu__toggler .bx-menu {
+nav .menu__toggler .bx-x, .open__menu .menu__toggler .bx-menu, nav .dark__mode .bx-sun, .dark .dark__mode .bx-moon {
     display: none;
 }
 
-.open__menu .menu__toggler .bx-x{
+.open__menu .menu__toggler .bx-x, .dark .dark__mode .bx-sun{
     display: block;
 }
 
 .open__menu ul {
-    opacity: 1; 
+    position: absolute;
+    right: 0;
+    top: 0;
     width: 70%;
     height: 80vh;
-    visibility: visible;
-    transform: translateX(0);
     display: flex;
     justify-content: center;
     align-items: center;
@@ -79,24 +87,29 @@ nav .menu__toggler .bx-x, .open__menu .menu__toggler .bx-menu {
 /*========== Responsive Navbar ===========*/
 
 @media screen and (min-width: 768px) {
-    nav {
-        justify-content: space-around;
+    nav .logo h1 , nav .logo .bxs-home, nav .bx {
+        font-size: 1.5rem;
     }
+
+    nav ul li {
+        font-size: 1.2rem;
+    }
+
+    nav {
+        justify-content: space-evenly;
+    }
+
     nav .menu__toggler {
         display: none;
     }
 
     nav ul {
         position: relative;
-        background: none;
-        opacity: 1;
-        visibility: visible;
-        transform: translateX(0);
         display: flex;
-        align-items: center;
         gap: 2rem;
-        box-shadow: none;
-        border-radius: 0;
+        align-items: center;
+        background: none;
+
     }
 
     nav ul li:hover {
