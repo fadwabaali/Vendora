@@ -1,9 +1,41 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 
+:root {
+    --primary-color : #D4B649;
+}
+
 *{
     margin: 0;
     padding: 0;
     font-family: 'Poppins', sans-serif;
+}
+
+input, button{
+    outline: none;
+    border: none;
+    border-radius: 5px;
+    padding: 5px 60px;
+    cursor: pointer;
+}
+
+.center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.primary-btn {
+    background-color: var(--primary-color);
+    color: #FFF;
+    margin: 1rem 0;
+    font-size: 1rem;
+}
+
+.secondary-btn {
+    background-color: #506e78;
+    color: #FFF;
+    margin: 1rem 0;
+    font-size: 1rem;
 }
 
 /*========== Navbar ===========*/
@@ -37,12 +69,12 @@ nav .logo h1 {
 
 nav .logo .bxs-home{
     font-size: 1.2rem;
-    color: #ffdb58;
+    color: var(--primary-color);
 }
 
 ul {
     list-style-type: none; 
-    background: #ffdb58;
+    background: var(--primary-color);
     display: none;
 }
 
@@ -115,8 +147,18 @@ nav .menu__toggler .bx-x, .open__menu .menu__toggler .bx-menu, nav .dark__mode .
     }
 
     nav ul li:hover {
-        color: #ffdb58;
+        color: var(--primary-color);
         transition: .5s;
+    }
+}
+
+@media screen and (min-width: 2000px) {
+    nav .logo h1 , nav .logo .bxs-home, nav .bx {
+        font-size: 2.5rem;
+    }
+
+    nav ul li {
+        font-size: 2rem;
     }
 }
 
@@ -126,6 +168,7 @@ nav .menu__toggler .bx-x, .open__menu .menu__toggler .bx-menu, nav .dark__mode .
     display: grid;
     grid-template-columns: repeat(1,1fr);
     place-items: center;
+    margin-bottom: 4rem;
 }
 
 .product__container #ProductImg {
@@ -154,6 +197,11 @@ nav .menu__toggler .bx-x, .open__menu .menu__toggler .bx-menu, nav .dark__mode .
     margin-bottom: .5rem;
 }
 
+.descp__container .bxs-star, 
+.descp__container .bxs-star-half {
+    color: var(--primary-color);
+    font-size: 1rem;
+}
 
 /*========== Responsive Product ===========*/
 
@@ -173,5 +221,141 @@ nav .menu__toggler .bx-x, .open__menu .menu__toggler .bx-menu, nav .dark__mode .
         height: 100px;
         width: 100px;
     }
+    .descp__container .bxs-star, 
+    .descp__container .bxs-star-half 
+    {
+        color: var(--primary-color);
+        font-size: 1.5rem;
+    }
+        
+    .descp__container h2,
+    .descp__container h3{ 
+        font-size: 1.5rem;
+    }
 }
 
+
+@media screen and (min-width: 2000px) {
+
+    .product__container #ProductImg {
+        height: 700px;
+        width: 700px;
+    }
+    
+    .product__container .product__content .product__img img{
+        height: 170px;
+        width: 170px;
+    }
+
+    .descp__container h2,
+    .descp__container h3{ 
+        font-size: 3rem;
+    }
+
+    .descp__container p{ 
+        font-size: 1.8rem;
+    }
+}
+
+/*========== Formulaire ===========*/
+ 
+.form_container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 2rem;
+    background-color: var(--primary-color);
+}
+.dark .form_container{
+    color: #000;
+}
+
+.form_container legend{
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin-bottom: 2rem;
+    letter-spacing: 2px;
+}
+
+/* .form_container legend span{
+    color: var(--primary-color);
+} */
+
+input[type="text"], input[type="number"], input[type="tel"] {
+    width: 100%;
+    padding: 5px;
+    margin: 5px 0 10px;
+    border: 1px solid #F0F0F0;
+    background: #F0F0F0;
+    border-radius: 4px;
+}
+
+.select, form p {
+    margin-bottom: 1.5rem;
+}
+
+.select {
+    padding: 10px;
+}
+
+.total {
+    font-weight: 900;
+}
+
+.user_fullname {
+    display: flex;
+    gap: .5rem;
+    flex-direction: column;
+}
+
+/*========== Responsive Formulaire ===========*/
+
+@media screen and (min-width : 500px)  {
+    .user_fullname {
+        flex-direction: row;
+        align-items: center;
+    }    
+
+    form {
+        width: 350px;
+    }
+    
+}
+
+@media screen and (min-width : 768px)  {
+
+    form {
+        width: 500px ;
+    }
+    
+    input[type="text"], input[type="number"], input[type="tel"] {
+        width: 100%;
+        padding: 5px;
+        margin: 5px 0 10px;
+        border: 1px solid #F0F0F0;
+        background: #F0F0F0;
+        border-radius: 4px;
+    }
+}
+
+@media screen and (min-width : 1800px)  {
+
+    form {
+        width: 800px ;
+    }
+    
+    input[type="text"], input[type="number"], input[type="tel"] {
+        width: 100%;
+        padding: 10px;
+        margin: 10px 0 15px;
+    }
+
+    form label, form p {
+        font-size: 1.8rem;
+    }
+
+    .select {
+        padding: 15px;
+    }
+}
