@@ -357,5 +357,6 @@ input[type="text"], input[type="number"], input[type="tel"] {
 
     .select {
         padding: 15px;
+        color: 45;
     }
 }
