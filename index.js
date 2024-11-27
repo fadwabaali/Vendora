@@ -1,5 +1,3 @@
-<<<<<<< Updated upstream
-=======
 /*=========== MENU__TOGGLER ===========*/
 const nav = document.querySelector('nav');
 const menuToggler = document.querySelector('.menu__toggler');
@@ -50,8 +48,7 @@ const regexValidation = {
   Prenom: /^[a-zA-Z]{2,}$/, 
   Adresse: /^.{5,}$/, 
   tele: /^\+?[0-9]{10,15}$/, 
-  Codepostal: /^[0-9]{5}
-  $/ 
+  Codepostal: /^[0-9]{5}$/ 
 };
 
 function validateField(input) {
@@ -83,4 +80,3 @@ function validateField(input) {
 
 // Calculer le total initial
 updateTotal();
->>>>>>> Stashed changes

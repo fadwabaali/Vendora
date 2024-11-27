@@ -3,9 +3,127 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href= "index.css">
+    <title>Vendora</title>
 </head>
 <body>
+   <!--========== NavBar ============--> 
+    <nav>
+        <div class="logo">
+            <i class='bx bxs-home'></i>
+            <h1>Vendora</h1>
+        </div>
+        <ul>
+           <li>Acceuil</li> 
+           <li>Produit</li>
+           <li>Contact</li>
+        </ul>
+
+        <!--======= DARK__MODE ========-->
+        <div class="dark__mode">
+            <i class='bx bx-sun' ></i>
+            <i class='bx bx-moon' ></i>
+        </div>
+
+        <!--======== MENU__TOOGLER ========-->
+        <div class="menu__toggler"> 
+            <i class='bx bx-menu'></i>
+            <i class='bx bx-x' ></i>
+        </div>
+
+    </nav>
+    <!--========== main ============-->
+    <main>
+        <!--========== section 1 ============-->
+        <section class="product__sec">
+            <div class="product__container">
+                <img src="img/img-1.png" width="100%" id="ProductImg" alt="product">
+                <div class="product__content">
+                    <div class="product__img">
+                        <img src="img/img-1.png" alt="blue sofa" width="100%" class="small_img">
+                    </div>
+                    <div class="product__img">
+                        <img src="img/img-2.png" alt="blue sofa" width="100%" class="small_img">
+                    </div>
+                    <div class="product__img">
+                        <img src="img/img-3.png" alt="blue sofa" width="100%" class="small_img">
+                    </div>
+                    <div class="product__img">
+                        <img src="img/img-4.png" alt="blue sofa" width="100%" class="small_img">
+                    </div>
+                </div>
+            </div>
+            <div class="descp__container">
+                <h2>PÄRUP</h2>
+                <p>Sofa, Fridtuna dark gray-blue</p>
+                <h3>$<span>699.00</span></h3>
+                <div class="ratings">
+                    <span>
+                        <i class='bx bxs-star'></i>
+                    </span>
+                    <span>
+                        <i class='bx bxs-star'></i>
+                    </span>
+
+                    <span>
+                        <i class='bx bxs-star'></i>
+                    </span>
+                    <span>
+                        <i class='bx bxs-star'></i>
+                    </span>
+                    <span>
+                        <i class='bx bxs-star-half' ></i>
+                    </span>
+                </div>
+                <p>Do you believe in love at first sight? Sleek design, 
+                    quick assembly and easy-care with a removable and washable cover make it easy to love PÄRUP sofa. 
+                    Welcoming to all of your loved ones!
+                    The cover’s ability to resist abrasion has been tested to handle 50,000 cycles. 15,000 cycles or more is suitable for furniture used every day at home. Over 30,000 cycles means a good ability to resist abrasion.
+                </p>
+
+                <button class="primary-btn">
+                    <i class='bx bx-shopping-bag'></i>
+                    Ajouter au panier
+                </button>
+
+            </div>
+        </section>
+        <!--========== section2 ============-->
+        <section class="form_container">  
+            <legend> <span><i class='bx bxs-user'></i></span> Information</legend>
+            <form>
+                <div class="user_fullname"> 
+                    <label for="Nom">nom:</label>
+                    <input placeholder="Au moins 2 lettres" type="text"id="Nom" name="Nom" class="form_input">
+                    <label for="Prenom">Prenom:</label>
+                    <input placeholder="Au moins 2 lettres" type="text"id="Prenom" name="Prenom" class="form_input">
+                </div>  
+                    <label for="Adresse">Adresse:</label>
+                    <input placeholder=" Au moins 5 caractères" type="text"id="Adresse" name="Adresse" class="form_input">
+                    <label for="tele">Tele:</label>
+                    <input placeholder=" Numéro de téléphone 10 à 15 chiffres, avec ou sans +" type="tel" id="Numero" name="tele" class="form_input">
+                    <label for="text">Code postal:</label>
+                    <input placeholder="Code postal (exactement 5 chiffres)" type="number" id="Codepostal" name="Codepostal" class="form_input">
+                    <label for="quantite">Quantité désirée :</label>
+                    <!-- <input placeholder="" type="number" id="quantite" name="quantite" value="1" min="1" max="5" class="form_input"> -->
+                    <select class="select" id="viewSelector" name="quantite">
+                        <option value="1" selected="selected">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                        <option value="5">5</option>
+                    </select>
+                    <p>Total de la commande : <span id="total">0</span></p>
+                    <div class="center">
+                        <button class="secondary-btn"type="submit" >Buy now</button>
+                    </div>
+                </form> 
+
+        </section>
+    </main>
+
     
+    <script src="index.js"></script>
 </body>
 </html>
