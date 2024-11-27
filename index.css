@@ -16,7 +16,7 @@ input, button{
 
 .primary-btn {
     background-color: #ffdb58;
-   display: flex;
+   display: flex;" " 
 }
 
 
@@ -91,3 +91,12 @@ input[type="text"], input[type="number"], input[type="tel"] {
     }
     
 }
+footer {
+    background-color: #506e78; /* Couleur de fond foncée */
+    color: white;            /* Couleur du texte */
+    padding: 20px 0;         /* Espacement autour du contenu */
+    text-align: center;      /* Centrer le texte */
+    position: relative;      /* Positionnement par rapport au flux normal */
+    bottom: 0;               /* Placer le footer en bas */
+    width: 100%;             /* Largeur complète */
+  } 
