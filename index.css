@@ -53,6 +53,8 @@ nav {
     padding: 2rem;
     margin-bottom: 1rem;
     height: 4rem;
+    animation: slideAppear 2s ease-out forwards;
+    z-index: 2;
 }
  
 nav .logo {
@@ -171,6 +173,11 @@ nav .menu__toggler .bx-x, .open__menu .menu__toggler .bx-menu, nav .dark__mode .
     margin-bottom: 4rem;
 }
 
+.product__container {
+    animation: slideInFromLeft 2s ease-out forwards;
+    /* animation-delay: 2.5s; */
+}
+
 .product__container #ProductImg {
     height: 300px;
     width: 300px;
@@ -191,6 +198,7 @@ nav .menu__toggler .bx-x, .open__menu .menu__toggler .bx-menu, nav .dark__mode .
 
 .descp__container{
     padding: 0 1rem;
+    animation: slideInFromRight 2s ease-out forwards;
 }
 
 .descp__container h2, .descp__container h3, .descp__container p{
@@ -305,8 +313,12 @@ input[type="text"], input[type="number"], input[type="tel"] {
 
 .user_fullname {
     display: flex;
-    gap: 1rem ;
+    gap: 1.5rem ;
     flex-direction: column;
+}
+
+label {
+    font-size: 1.3rem;
 }
 
 /*========== Responsive Formulaire ===========*/
@@ -357,16 +369,50 @@ input[type="text"], input[type="number"], input[type="tel"] {
 
     .select {
         padding: 15px;
-        color: 45;
     }
 }
 
+/*========== Footer ===========*/
 footer {
-    background-color: #506e78; /* Couleur de fond foncée */
-    color: white;            /* Couleur du texte */
-    padding: 20px 0;         /* Espacement autour du contenu */
-    text-align: center;      /* Centrer le texte */
-    position: relative;      /* Positionnement par rapport au flux normal */
-    bottom: 0;               /* Placer le footer en bas */
-    width: 100%;             /* Largeur complète */
+    background-color: #506e78; 
+    color: white;            
+    padding: 20px 0;         
+    text-align: center;      
+    position: relative;      
+    bottom: 0;               
+    width: 100%;            
 } 
+
+/*========== Animation ===========*/
+@keyframes slideInFromLeft {
+    0% {
+      transform: translateX(-100%);
+      opacity: 0;
+    }
+    100% {
+      transform: translateX(0);
+      opacity: 1;
+    }
+}
+
+@keyframes slideInFromRight {
+    0% {
+      transform: translateX(100%);
+      opacity: 0;
+    }
+    100% {
+      transform: translateX(0);
+      opacity: 1;
+    }
+  }
+
+@keyframes slideAppear {
+    0% {
+      transform: translateY(-100%);
+      opacity: 0;
+    }
+    100% {
+      transform: translateY(0);
+      opacity: 1;
+    }
+  }
